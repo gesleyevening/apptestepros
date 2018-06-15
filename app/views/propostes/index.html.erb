@@ -1,0 +1,37 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Propostes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nome</th>
+      <th>Descricao</th>
+      <th>Valor</th>
+      <th>Datainicio</th>
+      <th>Datafim</th>
+      <th>Cidade</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @propostes.each do |proposte| %>
+      <tr>
+        <td><%= proposte.nome %></td>
+        <td><%= proposte.descricao %></td>
+        <td><%= proposte.valor %></td>
+        <td><%= proposte.dataInicio %></td>
+        <td><%= proposte.dataFim %></td>
+        <td><%= proposte.cidade %></td>
+        <td><%= link_to 'Show', proposte %></td>
+        <td><%= link_to 'Edit', edit_proposte_path(proposte) %></td>
+        <td><%= link_to 'Destroy', proposte, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Proposte', new_proposte_path %>
