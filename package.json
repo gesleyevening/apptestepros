@@ -1,5 +1,8 @@
 {
   "name": "app_prosa",
   "private": true,
-  "dependencies": {}
+  "dependencies": {},
+  "devDependencies": {
+    "http-proxy-middleware": "^0.18.0"
+  }
 }

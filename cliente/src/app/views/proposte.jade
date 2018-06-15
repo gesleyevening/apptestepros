@@ -1,0 +1,12 @@
+div(ng-include="'app/components/navbar/navbar.html'")
+ 
+.container
+  h1 Propostes
+  ul
+    li(ng-repeat='proposte in propostes') 
+    {{ proposte.nome }}, 
+    {{ proposte.descricao }},
+    {{ proposte.valor }},
+    {{ proposte.dataInicio }}, 
+    {{ proposte.dataFim }},
+    {{ proposte.cidade }}
